@@ -6,7 +6,7 @@
 /*   By: istripol <istripol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 18:10:28 by istripol          #+#    #+#             */
-/*   Updated: 2024/03/26 06:20:30 by istripol         ###   ########.fr       */
+/*   Updated: 2024/03/26 16:13:58 by istripol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	cut_line(char **str)
 	(*str) = ligne;
 }
 
-static void	get_buffer(char *ptr, char *ligne)
+static void	get_rest(char *ptr, char *ligne)
 {
 	int		i;
 	char	*str;
@@ -63,7 +63,7 @@ static char	*get_final_line(char *ligne, char *buffer)
 {
 	if (ft_strchr(ligne, '\n'))
 	{
-		get_buffer(buffer, ligne);
+		get_rest(buffer, ligne);
 		return (ligne);
 	}
 	return (ligne);
